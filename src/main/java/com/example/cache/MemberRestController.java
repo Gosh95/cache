@@ -35,7 +35,10 @@ public class MemberRestController {
 	}
 
 	@PutMapping("/{memberId}")
-	public ResponseEntity<MemberDetailDto> editMemberInfo(@PathVariable Long memberId, @RequestBody UpdateDto updateDto) {
+	public ResponseEntity<MemberDetailDto> editMemberInfo(
+		@PathVariable Long memberId,
+		@RequestBody UpdateDto updateDto
+	) {
 		return ResponseEntity.ok(memberService.editMemberInfo(memberId, updateDto));
 	}
 
